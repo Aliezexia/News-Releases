@@ -35,7 +35,7 @@ namespace News_Releases
                 try
                 {
                     conn.Open();
-                    string sqlstring = "insert into News (Categories,Title,Content,Date) values('" + Categories + "','" + Title + "','" + html + "','" + DateTime.Now.ToString() + "')";
+                    string sqlstring = "insert into News (Categories,Title,Content,Date) values('" + Categories + "','" + Title + "','" + html + "',now())";
                     MySqlCommand com = new MySqlCommand(sqlstring, conn);
                     com.ExecuteScalar();
                 }

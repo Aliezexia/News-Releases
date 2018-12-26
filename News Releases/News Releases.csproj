@@ -89,46 +89,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="images\1.mp4" />
-    <Content Include="images\1.png" />
-    <Content Include="images\10.png" />
-    <Content Include="images\11.png" />
-    <Content Include="images\12.png" />
-    <Content Include="images\13.png" />
-    <Content Include="images\14.png" />
-    <Content Include="images\15.png" />
-    <Content Include="images\16.png" />
-    <Content Include="images\17.png" />
-    <Content Include="images\18.png" />
-    <Content Include="images\19.png" />
-    <Content Include="images\2.jpg" />
-    <Content Include="images\2.mp4" />
-    <Content Include="images\20.png" />
-    <Content Include="images\21.png" />
-    <Content Include="images\22.png" />
-    <Content Include="images\23.png" />
-    <Content Include="images\24.png" />
-    <Content Include="images\25.png" />
-    <Content Include="images\26.png" />
-    <Content Include="images\3.jpg" />
-    <Content Include="images\3.mp4" />
-    <Content Include="images\4.jpg" />
-    <Content Include="images\4.mp4" />
-    <Content Include="images\5.jpg" />
-    <Content Include="images\6.png" />
-    <Content Include="images\7.png" />
-    <Content Include="images\8.png" />
-    <Content Include="images\9.png" />
-    <Content Include="images\timg.jpg" />
     <Content Include="Login.aspx" />
     <Content Include="newsDetail.aspx" />
     <Content Include="Register.aspx" />
-    <Content Include="news\11chengshidian.html" />
-    <Content Include="news\baoan.html" />
-    <Content Include="news\changersanhao.html" />
-    <Content Include="news\daguoqixiang.html" />
     <Content Include="news\dashi.html" />
-    <Content Include="news\dushiqingnian.html" />
     <Content Include="news\G20.html" />
     <Content Include="news\hanchaolanse.html" />
     <Content Include="news\hunanyiyang.html" />
@@ -136,28 +100,10 @@
     <Content Include="news\jingjiguancha.html" />
     <Content Include="news\mengqu.html" />
     <Content Include="news\munv.html" />
-    <Content Include="news\nanziyong.html" />
-    <Content Include="news\new_3.jpg.html" />
-    <Content Include="news\new_4.jpg.html" />
     <Content Include="news\new_f5.jpg.html" />
-    <Content Include="news\qixiangtai.html" />
-    <Content Include="news\redianguanzhu.html" />
     <Content Include="news\renmingribao.html" />
-    <Content Include="news\shenzhenpinxian.html" />
     <Content Include="news\taimei.html" />
-    <Content Include="news\telangpu.html" />
-    <Content Include="news\tudou.html" />
-    <Content Include="news\waijiaobuzhaojiao.html" />
-    <Content Include="news\wanghong.html" />
-    <Content Include="news\wukelan.html" />
     <Content Include="news\xijinpingshouguan.html" />
-    <Content Include="news\xinwenbeijing.html" />
-    <Content Include="news\yaopindailiang.html" />
-    <Content Include="news\yinlingxinshidai.html" />
-    <Content Include="news\zhijng.html" />
-    <Content Include="news\zhongguochengshi.html" />
-    <Content Include="news\zhongguoshoujian.html" />
-    <Content Include="news\zhongguozhongdongbu.html" />
     <Content Include="Message.aspx" />
     <Content Include="addNews.aspx" />
     <Content Include="ueditor\demo.html" />
@@ -509,7 +455,9 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="images\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

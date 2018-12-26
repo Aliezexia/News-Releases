@@ -27,12 +27,12 @@
                     <a href="/news/G20.html">时政</a>
                     <a href="/news/dashi.html">文化</a>
                     <a href="/news/taimei.html">台湾</a>
-                    <a href="Login.aspx">发布新闻</a>
-                    <a href="Login.aspx">登录</a>
+                    <a href="addNews.aspx">发布新闻</a>
                 </div>
                 <style type="text/css">
                     body {
                         background: url(/images/2.jpg);
+                        background-size:100%;
                     }
 
                     #top,
@@ -81,15 +81,15 @@
                                 <asp:ListItem>国际新闻</asp:ListItem>
                                 <asp:ListItem>娱乐新闻</asp:ListItem>
                                 <asp:ListItem>热点新闻</asp:ListItem>
+                                <asp:ListItem>时政新闻</asp:ListItem>
+                                <asp:ListItem>经济新闻</asp:ListItem>
+                                <asp:ListItem>社会新闻</asp:ListItem>
                             </asp:DropDownList>
                         </td>
                         <td style="width: 120px; height: 30px; text-align: right;">填写标题：
                         </td>
                         <td>
-                            <asp:TextBox ID="text" runat="server" MaxLength="10" Wrap="False"></asp:TextBox>
-                        </td>
-                        <td>
-                            <p id="p">*字数限制为10个</p>
+                            <asp:TextBox ID="text" runat="server"  Wrap="False"></asp:TextBox>
                         </td>
                     </tr>
 
@@ -107,7 +107,7 @@
             <div class="content">
                 <!-- 加载编辑器的容器 -->
                 <script id="container" type="text/plain">
-        新闻内容
+                新闻内容
                 </script>
                 <!-- 配置文件 -->
                 <script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.config.js"></script>
@@ -156,10 +156,10 @@
                         elementPathEnabled: false  //组织显示元素路径
                     });
                     //正确的初始化方式
-                    ue.ready(function () {
-                        //this是当前创建的编辑器实例
-                        this.setContent(htmlContent)
-                    })
+                    //ue.ready(function () {
+                    //    //this是当前创建的编辑器实例
+                    //    this.setContent(htmlContent)
+                    //})
                     $("#btn_Add").click(function () {
                         var msg = UE.getEditor('editor').getContent();
                         var categories = document.getElementById('dlstNewsType').value;

@@ -12,20 +12,20 @@
                 <table>
 				<tr>
                     <td>
-                        分类
+                        国际新闻
                     </td>
                         <td class="auto-style1">
-                            <asp:DataList ID="dlstShiShi" runat="server" OnItemCommand="dlstShiShi_ItemCommand"
+                            <asp:DataList ID="dlstguoji" runat="server" OnItemCommand="dlstguoji_ItemCommand"
                                 Height="244px" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px"
                                 CellPadding="3" GridLines="Both" Width="279px">
                                 <ItemTemplate>
                                     <table border="0" style="font-size: 9pt; width: 100%; height: 100%;">
                                         <tr>
                                             <td class="dtd2">
-                                                <asp:LinkButton ID="lbtnTitle" runat="server" CommandName="select" CausesValidation="False"><%# DataBinder.Eval(Container.DataItem, "title")%></asp:LinkButton>
+                                                <asp:LinkButton ID="lbtnTitle" runat="server" CommandName="select" CausesValidation="False"><%# DataBinder.Eval(Container.DataItem, "Title")%></asp:LinkButton>
                                             </td>
                                             <td style="width: 150px">
-                                                <%#DataBinder.Eval(Container.DataItem, "IssueDate")%>
+                                                <%#DataBinder.Eval(Container.DataItem, "Date")%>
                                             </td>
                                         </tr>
                                     </table>
@@ -42,20 +42,20 @@
                     <table>
 				<tr>
                     <td>
-                        分类
+                        经济新闻
                     </td>
                         <td class="auto-style1">
-                            <asp:DataList ID="DataList1" runat="server" OnItemCommand="dlstShiShi_ItemCommand"
+                            <asp:DataList ID="dlstjingji" runat="server" OnItemCommand="dlstjingji_ItemCommand"
                                 Height="244px" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px"
                                 CellPadding="3" GridLines="Both" Width="276px">
                                 <ItemTemplate>
                                     <table border="0" style="font-size: 9pt; width: 100%; height: 100%;">
                                         <tr>
                                             <td class="dtd2">
-                                                <asp:LinkButton ID="lbtnTitle" runat="server" CommandName="select" CausesValidation="False"><%# DataBinder.Eval(Container.DataItem, "title")%></asp:LinkButton>
+                                                <asp:LinkButton ID="lbtnTitle" runat="server" CommandName="select" CausesValidation="False"><%# DataBinder.Eval(Container.DataItem, "Title")%></asp:LinkButton>
                                             </td>
                                             <td style="width: 150px">
-                                                <%#DataBinder.Eval(Container.DataItem, "IssueDate")%>
+                                                <%#DataBinder.Eval(Container.DataItem, "Date")%>
                                             </td>
                                         </tr>
                                     </table>
@@ -77,20 +77,20 @@
                     <table>
 				<tr>
                     <td>
-                        分类
+                        娱乐新闻
                     </td>
                         <td class="auto-style1">
-                            <asp:DataList ID="DataList2" runat="server" OnItemCommand="dlstShiShi_ItemCommand"
+                            <asp:DataList ID="dlstyule" runat="server" OnItemCommand="dlstyule_ItemCommand"
                                 Height="245px" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px"
                                 CellPadding="3" GridLines="Both" Width="279px">
                                 <ItemTemplate>
                                     <table border="0" style="font-size: 9pt; width: 100%; height: 100%;">
                                         <tr>
                                             <td class="dtd2">
-                                                <asp:LinkButton ID="lbtnTitle" runat="server" CommandName="select" CausesValidation="False"><%# DataBinder.Eval(Container.DataItem, "title")%></asp:LinkButton>
+                                                <asp:LinkButton ID="lbtnTitle" runat="server" CommandName="select" CausesValidation="False"><%# DataBinder.Eval(Container.DataItem, "Title")%></asp:LinkButton>
                                             </td>
                                             <td style="width: 150px">
-                                                <%#DataBinder.Eval(Container.DataItem, "IssueDate")%>
+                                                <%#DataBinder.Eval(Container.DataItem, "Date")%>
                                             </td>
                                         </tr>
                                     </table>
@@ -110,20 +110,20 @@
                         <table>
 				  <tr>
                       <td>
-                        分类
+                        时政新闻
                     </td>
                         <td class="auto-style1">
-                            <asp:DataList ID="DataList3" runat="server" OnItemCommand="dlstShiShi_ItemCommand"
+                            <asp:DataList ID="dlstshizheng" runat="server" OnItemCommand="dlstshizheng_ItemCommand"
                                 Height="244px" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px"
                                 CellPadding="3" GridLines="Both" Width="286px">
                                 <ItemTemplate>
                                     <table border="0" style="font-size: 9pt; width: 100%; height: 100%;">
                                         <tr>
                                             <td class="dtd2">
-                                                <asp:LinkButton ID="lbtnTitle" runat="server" CommandName="select" CausesValidation="False"><%# DataBinder.Eval(Container.DataItem, "title")%></asp:LinkButton>
+                                                <asp:LinkButton ID="lbtnTitle" runat="server" CommandName="select" CausesValidation="False"><%# DataBinder.Eval(Container.DataItem, "Title")%></asp:LinkButton>
                                             </td>
                                             <td style="width: 150px">
-                                                <%#DataBinder.Eval(Container.DataItem, "IssueDate")%>
+                                                <%#DataBinder.Eval(Container.DataItem, "Date")%>
                                             </td>
                                         </tr>
                                     </table>
@@ -144,20 +144,20 @@
                         <table>
 				  <tr>
                       <td>
-                        分类
+                        社会新闻
                     </td>
                         <td class="auto-style1">
-                            <asp:DataList ID="DataList4" runat="server" OnItemCommand="dlstShiShi_ItemCommand"
+                            <asp:DataList ID="dlstshehui" runat="server" OnItemCommand="dlstshehui_ItemCommand"
                                 Height="244px" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px"
                                 CellPadding="3" GridLines="Both" Width="286px">
                                 <ItemTemplate>
                                     <table border="0" style="font-size: 9pt; width: 100%; height: 100%;">
                                         <tr>
                                             <td class="dtd2">
-                                                <asp:LinkButton ID="lbtnTitle" runat="server" CommandName="select" CausesValidation="False"><%# DataBinder.Eval(Container.DataItem, "title")%></asp:LinkButton>
+                                                <asp:LinkButton ID="lbtnTitle" runat="server" CommandName="select" CausesValidation="False"><%# DataBinder.Eval(Container.DataItem, "Title")%></asp:LinkButton>
                                             </td>
                                             <td style="width: 150px">
-                                                <%#DataBinder.Eval(Container.DataItem, "IssueDate")%>
+                                                <%#DataBinder.Eval(Container.DataItem, "Date")%>
                                             </td>
                                         </tr>
                                     </table>
@@ -178,20 +178,20 @@
                         <table>
 				  <tr>
                       <td>
-                        分类
+                        热点新闻
                     </td>
                         <td class="auto-style1">
-                            <asp:DataList ID="DataList5" runat="server" OnItemCommand="dlstShiShi_ItemCommand"
+                            <asp:DataList ID="dlstredian" runat="server" OnItemCommand="dlstredian_ItemCommand"
                                 Height="245px" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px"
                                 CellPadding="3" GridLines="Both" Width="286px">
                                 <ItemTemplate>
                                     <table border="0" style="font-size: 9pt; width: 100%; height: 100%;">
                                         <tr>
                                             <td class="dtd2">
-                                                <asp:LinkButton ID="lbtnTitle" runat="server" CommandName="select" CausesValidation="False"><%# DataBinder.Eval(Container.DataItem, "title")%></asp:LinkButton>
+                                                <asp:LinkButton ID="lbtnTitle" runat="server" CommandName="select" CausesValidation="False"><%# DataBinder.Eval(Container.DataItem, "Title")%></asp:LinkButton>
                                             </td>
                                             <td style="width: 150px">
-                                                <%#DataBinder.Eval(Container.DataItem, "IssueDate")%>
+                                                <%#DataBinder.Eval(Container.DataItem, "Date")%>
                                             </td>
                                         </tr>
                                     </table>
@@ -311,5 +311,6 @@
                 }
 			</style>
 		</div>
+            </div>
 </asp:Content>
 

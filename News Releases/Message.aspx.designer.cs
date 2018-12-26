@@ -13,57 +13,57 @@ namespace News_Releases {
     public partial class Register {
         
         /// <summary>
-        /// dlstShiShi 控件。
+        /// dlstguoji 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList dlstShiShi;
+        protected global::System.Web.UI.WebControls.DataList dlstguoji;
         
         /// <summary>
-        /// DataList1 控件。
+        /// dlstjingji 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList DataList1;
+        protected global::System.Web.UI.WebControls.DataList dlstjingji;
         
         /// <summary>
-        /// DataList2 控件。
+        /// dlstyule 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList DataList2;
+        protected global::System.Web.UI.WebControls.DataList dlstyule;
         
         /// <summary>
-        /// DataList3 控件。
+        /// dlstshizheng 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList DataList3;
+        protected global::System.Web.UI.WebControls.DataList dlstshizheng;
         
         /// <summary>
-        /// DataList4 控件。
+        /// dlstshehui 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList DataList4;
+        protected global::System.Web.UI.WebControls.DataList dlstshehui;
         
         /// <summary>
-        /// DataList5 控件。
+        /// dlstredian 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList DataList5;
+        protected global::System.Web.UI.WebControls.DataList dlstredian;
     }
 }
