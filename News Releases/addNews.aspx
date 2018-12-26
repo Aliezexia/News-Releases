@@ -27,7 +27,7 @@
                     <a href="/news/G20.html">时政</a>
                     <a href="/news/dashi.html">文化</a>
                     <a href="/news/taimei.html">台湾</a>
-                    <a href="addNews.aspx">发布新闻</a>
+                    <a href="addNews.aspx">管理新闻</a>
                 </div>
                 <style type="text/css">
                     body {
