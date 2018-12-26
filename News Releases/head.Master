@@ -1,0 +1,80 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="head.master.cs" Inherits="News_Releases.head" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head1" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div id="top">
+			<div class="nav fl">
+				<a href="Message.aspx" class="current">首&nbsp;&nbsp;页</a>
+				<a href="/news/jianadacubao.html">国际</a>
+				<a href="/news/renmingribao.html">财经</a>
+				<a href="/news/munv.html">热点</a>
+				<a href="/news/new_f5.jpg.html">风景</a>
+				<a href="/news/mengqu.html">娱乐</a>
+				<a href="/news/xijinpingshouguan.html">中国</a>
+				<a href="/news/hunanyiyang.html">社会</a>
+				<a href="/news/hanchaolanse.html">天气</a>
+				<a href="/news/jingjiguancha.html">直播</a>
+				<a href="/news/G20.html">时政</a>
+				<a href="/news/dashi.html">文化</a>
+				<a href="/news/taimei.html">台湾</a>
+				<a href="Login.aspx">发布新闻</a>
+                <a href="Login.aspx">登录</a>
+			</div>
+			<style type="text/css">
+				body {
+					background: url(/images/2.jpg);
+				}
+
+				#top,
+				.banner,
+				.content {
+					width: 950px;
+					margin: 0 auto;
+					background: #fff;
+				}
+
+				#top {
+					height: 34px;
+				}
+				
+
+				.nav {
+					width: 950px;
+					height: 35px;
+					border-top: solid 10px #000;
+					margin-top: 9px;
+				}
+
+				.nav a {
+					font-size: 16px;
+					line-height: 35px;
+					padding: 0 8px;
+					color: #000;
+					height: 35px;
+					display: inline-block;
+
+				}
+
+				.nav a:hover,
+				.current {
+					color: #fff !important;
+					background: #900;
+				}
+			</style>
+		</div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
