@@ -89,10 +89,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="About.aspx" />
     <Content Include="images\2.jpg" />
     <Content Include="images\6.png" />
     <Content Include="Login.aspx" />
     <Content Include="newsDetail.aspx" />
+    <Content Include="NewsManage.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="news\dashi.html" />
     <Content Include="news\G20.html" />
@@ -380,10 +382,26 @@
     <Content Include="ueditor\ueditor.config.js" />
     <Content Include="ueditor\ueditor.parse.js" />
     <Content Include="ueditor\ueditor.parse.min.js" />
+    <Content Include="UpdateNews.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UpdateNews.aspx.cs">
+      <DependentUpon>UpdateNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateNews.aspx.designer.cs">
+      <DependentUpon>UpdateNews.aspx</DependentUpon>
+    </Compile>
     <Content Include="App_Code\Msg.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="head.Master.cs">
       <DependentUpon>head.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -404,6 +422,13 @@
     </Compile>
     <Compile Include="newsDetail.aspx.designer.cs">
       <DependentUpon>newsDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewsManage.aspx.cs">
+      <DependentUpon>NewsManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewsManage.aspx.designer.cs">
+      <DependentUpon>NewsManage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>

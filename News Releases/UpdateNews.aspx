@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" ValidateRequest="false" CodeBehind="addNews.aspx.cs" Inherits="News_Releases.addNews" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UpdateNews.aspx.cs" Inherits="News_Releases.UpdateNews" %>
 
 <!DOCTYPE html>
 
@@ -27,7 +27,7 @@
                     <a href="/news/G20.html">时政</a>
                     <a href="/news/dashi.html">文化</a>
                     <a href="/news/taimei.html">台湾</a>
-                    <a href="UpdateNews.aspx">管理新闻</a>
+                    <a href="addNews.aspx">管理新闻</a>
                 </div>
                 <style type="text/css">
                     body {
@@ -122,6 +122,7 @@
 
                 <!--隐藏控件为编辑器赋值用-->
                 <asp:HiddenField ID="hide_Content" Value="" runat="server" />
+                <input type="hidden" id="getsession" value="<%= Session["ID"] %>" />
                 <button id="btn_Add">提交</button>
                 <style>
                     #btn_Add{
@@ -155,21 +156,22 @@
                         elementPathEnabled: false  //组织显示元素路径
                     });
                     //正确的初始化方式
-                    //ue.ready(function () {
-                    //    //this是当前创建的编辑器实例
-                    //    this.setContent(htmlContent)
-                    //})
+                    ue.ready(function () {
+                        //this是当前创建的编辑器实例
+                        this.setContent(htmlContent)
+                    })
                     $("#btn_Add").click(function () {
                         var msg = UE.getEditor('editor').getContent();
                         var categories = document.getElementById('dlstNewsType').value;
                         var title = document.getElementById('text').value;
+                        var id = document.getElementById("getsession").value;
                         document.getElementById("<%=hide_Content.ClientID %>").value = msg;
                         $.ajax({
                             type: 'post',
-                            url: 'addNews.aspx/RequestMethod',
+                            url: 'UpdateNews.aspx/RequestMethod',
                             async: true,
                             contentType: "application/json;charset=utf-8",
-                            data: "{'msg':'" + msg + "','categories':'" + categories + "','title':'" + title + "'}",
+                            data: "{'msg':'" + msg + "','categories':'" + categories + "','title':'" + title + "','id':'" + id +"'}",
                             //data: "{'msg':'"+msg+"'}",
                             dataType: "json",
                             success: function (result) {

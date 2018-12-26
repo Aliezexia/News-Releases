@@ -9,9 +9,9 @@
 			</div>
 			<div class="auto-style2">
                 <div class="a">
-                <table>
+                <table cellspacing="0px">
 				<tr>
-                    <td>
+                    <td class="q">
                         国际新闻
                     </td>
                         <td class="auto-style1">
@@ -22,11 +22,27 @@
                                     <table border="0" style="font-size: 9pt; width: 100%; height: 100%;">
                                         <tr>
                                             <td class="dtd2">
-                                                <asp:LinkButton ID="lbtnTitle" runat="server" CommandName="select" CausesValidation="False"><%# DataBinder.Eval(Container.DataItem, "Title")%></asp:LinkButton>
+                                                <asp:LinkButton ID="lbtnTitle" runat="server"  CommandName="select" CausesValidation="False"><%# DataBinder.Eval(Container.DataItem, "Title")%></asp:LinkButton>
                                             </td>
-                                            <td style="width: 150px">
-                                                <%#DataBinder.Eval(Container.DataItem, "Date")%>
-                                            </td>
+                                            <style>
+                                                .dtd2{
+                                                    font-size:larger;
+                                                }
+                                                a{
+                                                    color:black;
+                                                    text-decoration:none;
+                                                }
+                                                a:hover{
+                                                    color:red;
+                                                }
+                                                .q{
+                                                    color:red;
+                                                    font-weight:700;
+                                                    font-family:FangSong;
+                                                }
+                                            </style>
+                                            <td style="width: 50px">
+                                                <%#DataBinder.Eval(Container.DataItem, "Date")%></td>
                                         </tr>
                                     </table>
                                 </ItemTemplate>
@@ -35,13 +51,12 @@
                             </asp:DataList>
                         </td>
                     </tr>
-                    
                     </table>
 				</div>
                 <div class="a">
                     <table>
 				<tr>
-                    <td>
+                    <td class="q">
                         经济新闻
                     </td>
                         <td class="auto-style1">
@@ -54,9 +69,8 @@
                                             <td class="dtd2">
                                                 <asp:LinkButton ID="lbtnTitle" runat="server" CommandName="select" CausesValidation="False"><%# DataBinder.Eval(Container.DataItem, "Title")%></asp:LinkButton>
                                             </td>
-                                            <td style="width: 150px">
-                                                <%#DataBinder.Eval(Container.DataItem, "Date")%>
-                                            </td>
+                                            <td style="width: 50px">
+                                                <%#DataBinder.Eval(Container.DataItem, "Date")%></td>
                                         </tr>
                                     </table>
                                 </ItemTemplate>
@@ -76,7 +90,7 @@
                 <div>
                     <table>
 				<tr>
-                    <td>
+                    <td class="q">
                         娱乐新闻
                     </td>
                         <td class="auto-style1">
@@ -89,9 +103,8 @@
                                             <td class="dtd2">
                                                 <asp:LinkButton ID="lbtnTitle" runat="server" CommandName="select" CausesValidation="False"><%# DataBinder.Eval(Container.DataItem, "Title")%></asp:LinkButton>
                                             </td>
-                                            <td style="width: 150px">
-                                                <%#DataBinder.Eval(Container.DataItem, "Date")%>
-                                            </td>
+                                            <td style="width: 50px">
+                                                <%#DataBinder.Eval(Container.DataItem, "Date")%></td>
                                         </tr>
                                     </table>
                                 </ItemTemplate>
@@ -109,7 +122,7 @@
 					<div class="c">
                         <table>
 				  <tr>
-                      <td>
+                      <td class="q">
                         时政新闻
                     </td>
                         <td class="auto-style1">
@@ -122,9 +135,8 @@
                                             <td class="dtd2">
                                                 <asp:LinkButton ID="lbtnTitle" runat="server" CommandName="select" CausesValidation="False"><%# DataBinder.Eval(Container.DataItem, "Title")%></asp:LinkButton>
                                             </td>
-                                            <td style="width: 150px">
-                                                <%#DataBinder.Eval(Container.DataItem, "Date")%>
-                                            </td>
+                                            <td style="width: 50px">
+                                                <%#DataBinder.Eval(Container.DataItem, "Date")%></td>
                                         </tr>
                                     </table>
                                 </ItemTemplate>
@@ -143,7 +155,7 @@
                     <div class="b">
                         <table>
 				  <tr>
-                      <td>
+                      <td class="q">
                         社会新闻
                     </td>
                         <td class="auto-style1">
@@ -156,9 +168,8 @@
                                             <td class="dtd2">
                                                 <asp:LinkButton ID="lbtnTitle" runat="server" CommandName="select" CausesValidation="False"><%# DataBinder.Eval(Container.DataItem, "Title")%></asp:LinkButton>
                                             </td>
-                                            <td style="width: 150px">
-                                                <%#DataBinder.Eval(Container.DataItem, "Date")%>
-                                            </td>
+                                            <td style="width: 50px">
+                                                <%#DataBinder.Eval(Container.DataItem, "Date")%></td>
                                         </tr>
                                     </table>
                                 </ItemTemplate>
@@ -177,7 +188,7 @@
                     <div>
                         <table>
 				  <tr>
-                      <td>
+                      <td class="q">
                         热点新闻
                     </td>
                         <td class="auto-style1">
@@ -190,9 +201,8 @@
                                             <td class="dtd2">
                                                 <asp:LinkButton ID="lbtnTitle" runat="server" CommandName="select" CausesValidation="False"><%# DataBinder.Eval(Container.DataItem, "Title")%></asp:LinkButton>
                                             </td>
-                                            <td style="width: 150px">
-                                                <%#DataBinder.Eval(Container.DataItem, "Date")%>
-                                            </td>
+                                            <td style="width: 50px">
+                                                <%#DataBinder.Eval(Container.DataItem, "Date")%></td>
                                         </tr>
                                     </table>
                                 </ItemTemplate>

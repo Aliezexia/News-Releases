@@ -156,7 +156,11 @@
                     <asp:Button ID="Button1" runat="server" Text="注 册" Width="200px" Height="40px" OnClick="Button1_Click" />
                 </div>
             </div>
-
+            <style>
+                .sideright{
+                     border-radius:15px;
+                }
+            </style>
         </form>
     </div>
 </body>

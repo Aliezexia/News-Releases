@@ -19,7 +19,6 @@ namespace News_Releases
             //    Response.Write("<script language='javascript'>alert('您还没有登陆!');this.location.href='Login.aspx';</SCRIPT>");
             //}
             text.Text = "";
-            
         }
         
 
