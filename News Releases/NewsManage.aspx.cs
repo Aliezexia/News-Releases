@@ -12,7 +12,7 @@ namespace News_Releases
 {
     public partial class NewsManage : System.Web.UI.Page
     {
-        MySqlConnection conn = new MySqlConnection("server=47.106.146.81;user id=root;password=030055lkz;database=NEWS;charset=utf8");
+        MySqlConnection conn = new MySqlConnection("server=47.106.146.81;user id=root;password=;database=NEWS;charset=utf8");
         public static int number;
         protected void Page_Load(object sender, EventArgs e)
         {

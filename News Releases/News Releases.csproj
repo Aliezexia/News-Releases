@@ -90,11 +90,28 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="images\1.png" />
+    <Content Include="images\12.png" />
+    <Content Include="images\16.png" />
+    <Content Include="images\17.png" />
+    <Content Include="images\19.png" />
     <Content Include="images\2.jpg" />
+    <Content Include="images\24.png" />
+    <Content Include="images\25.png" />
+    <Content Include="images\26.png" />
+    <Content Include="images\3.jpg" />
+    <Content Include="images\4.jpg" />
+    <Content Include="images\4.mp4" />
+    <Content Include="images\5.jpg" />
     <Content Include="images\6.png" />
+    <Content Include="images\7.png" />
+    <Content Include="images\8.png" />
+    <Content Include="images\9.png" />
     <Content Include="Login.aspx" />
     <Content Include="newsDetail.aspx" />
     <Content Include="NewsManage.aspx" />
+    <Content Include="news\new_3.jpg.html" />
+    <Content Include="news\new_4.jpg.html" />
     <Content Include="Register.aspx" />
     <Content Include="news\dashi.html" />
     <Content Include="news\G20.html" />

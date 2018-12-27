@@ -12,10 +12,10 @@ namespace News_Releases
     {
         public string title;
         public string html;
-        public string categories;
+        public string categories = "国际新闻";
         protected void Page_Load(object sender, EventArgs e)
         {
-            MySqlConnection conn = new MySqlConnection("server=47.106.146.81;user id=root;password=030055lkz;database=NEWS;charset=utf8");
+            MySqlConnection conn = new MySqlConnection("server=47.106.146.81;user id=root;password=;database=NEWS;charset=utf8");
             conn.Open();
             string sql = "select * from News where ID ='" + Request.QueryString["id"] + "'";
             MySqlCommand com = new MySqlCommand(sql, conn);
@@ -39,7 +39,7 @@ namespace News_Releases
             string Categories = categories;
             string Title = title;
             int ID = id;
-            MySqlConnection conn = new MySqlConnection("server=47.106.146.81;user id=root;password=030055lkz;database=NEWS;charset=utf8");
+            MySqlConnection conn = new MySqlConnection("server=47.106.146.81;user id=root;password=;database=NEWS;charset=utf8");
             if (html != "" && Categories != "" && Title != "")
             {
                 try
