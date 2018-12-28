@@ -14,7 +14,7 @@ namespace News_Releases
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            MySqlConnection conn = new MySqlConnection("server=47.106.146.81;user id=root;password=;database=NEWS;charset=utf8");
+            MySqlConnection conn = new MySqlConnection("server=47.106.146.81;user id=root;password=030055lkz;database=NEWS;charset=utf8");
             string[] str = { "国际新闻", "经济新闻", "娱乐新闻", "时政新闻", "社会新闻", "热点新闻" };
             string[] str_id = { "dlstguoji", "dlstjingji", "dlstyule", "dlstshizheng", "dlstshehui", "dlstredian" };
             for (int i = 0; i <= 5; i++)

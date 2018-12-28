@@ -15,60 +15,61 @@
             <div id="top">
                 <div class="nav fl">
                     <a href="Message.aspx" class="current">首&nbsp;&nbsp;页</a>
-                    <a href="/news/jianadacubao.html">国际</a>
-                    <a href="/news/renmingribao.html">财经</a>
-                    <a href="/news/munv.html">热点</a>
+                    <a href="/newsDetail.aspx?categories='国际新闻'">国际</a>
+                    <a href="/newsDetail.aspx?categories='经济新闻'">财经</a>
+                    <a href="/newsDetail.aspx?categories='热点新闻'">热点</a>
+                    <a href="/newsDetail.aspx?categories='娱乐新闻'">娱乐</a>
+                    <a href="/newsDetail.aspx?categories='社会新闻'">社会</a>
+                    <a href="/newsDetail.aspx?categories='时政新闻'">时政</a>
                     <a href="/news/new_f5.jpg.html">风景</a>
-                    <a href="/news/mengqu.html">娱乐</a>
-                    <a href="/news/xijinpingshouguan.html">中国</a>
-                    <a href="/news/hunanyiyang.html">社会</a>
+                    <a href="/news/G20.html">中国</a>
                     <a href="/news/hanchaolanse.html">天气</a>
                     <a href="/news/jingjiguancha.html">直播</a>
-                    <a href="/news/G20.html">时政</a>
                     <a href="/news/dashi.html">文化</a>
                     <a href="/news/taimei.html">台湾</a>
                     <a href="NewsManage.aspx">管理新闻</a>
                 </div>
                 <style type="text/css">
                     body {
-                        background: url(/images/2.jpg);
-                        background-size:100%;
-                    }
+					background: url(/images/2.jpg);
+                    background-size:100%;
+				}
 
-                    #top,
-                    .banner,
-                    .content {
-                        width: 950px;
-                        margin: 0 auto;
-                        background: #fff;
-                    }
+				#top,
+				.banner,
+				.content {
+					width: 70%;
+					margin: 0 auto;
+					background: #fff;
+				}
 
-                    #top {
-                        height: 44px;
-                    }
+				#top {
+					height: 45px;
+				}
+				
 
+				.nav {
+					width: 100%;
+					height: 35px;
+					border-top: solid 10px #000;
+					margin-top: 9px;
+				}
 
-                    .nav {
-                        width: 950px;
-                        height: 35px;
-                        border-top: solid 10px #000;
-                        margin-top: 9px;
-                    }
+				.nav a {
+					font-size: 16px;
+					line-height: 35px;
+					padding: 0 8px;
+					color: #000;
+					height: 35px;
+					display: inline-block;
 
-                        .nav a {
-                            font-size: 16px;
-                            line-height: 35px;
-                            padding: 0 8px;
-                            color: #000;
-                            height: 35px;
-                            display: inline-block;
-                        }
+				}
 
-                            .nav a:hover,
-                            .current {
-                                color: #fff !important;
-                                background: #900;
-                            }
+				.nav a:hover,
+				.current {
+					color: #fff !important;
+					background: #900;
+				}
                 </style>
             </div>
             <div class="content">
@@ -77,7 +78,7 @@
                         <td style="width: 120px; height: 30px; text-align: right;">选择新闻类别：
                         </td>
                         <td>
-                            <asp:DropDownList ID="dlstNewsType" runat="server" AutoPostBack="True" Width="200px">
+                            <asp:DropDownList ID="dlstNewsType" runat="server" AutoPostBack="False" Width="200px">
                                 <asp:ListItem>国际新闻</asp:ListItem>
                                 <asp:ListItem>娱乐新闻</asp:ListItem>
                                 <asp:ListItem>热点新闻</asp:ListItem>
@@ -89,8 +90,9 @@
                         <td style="width: 120px; height: 30px; text-align: right;">填写标题：
                         </td>
                         <td>
-                            <asp:TextBox ID="text" runat="server"  Wrap="False"></asp:TextBox>
+                            <asp:TextBox ID="text" runat="server" Wrap="False"></asp:TextBox>
                         </td>
+                        <td id="p">&emsp;&emsp;字数限制为50字以内</td>
                     </tr>
 
                 </table>
@@ -100,11 +102,11 @@
                     }
 
                     #p {
-                        font-size: 8px;
+                        font-size: 10px;
                     }
                 </style>
             </div>
-            <div class="content">
+            <div class="auto-style1">
                 <!-- 加载编辑器的容器 -->
                 <script id="container" type="text/plain">
                 新闻内容
@@ -118,23 +120,24 @@
 
                 <!-- 实例化编辑器 -->
 
-                <script id="editor" type="text/plain" style="width: 948px; height: 700px"> </script>
+                <script id="editor" type="text/plain" style="width: 99.95%; height: 700px"> </script>
 
                 <!--隐藏控件为编辑器赋值用-->
                 <asp:HiddenField ID="hide_Content" Value="" runat="server" />
                 <button id="btn_Add">提交</button>
                 <style>
-                    #btn_Add{
-                        margin-left:450px;
-                        height:40px;
-                        width:90px;
-                        font-size:19px;
-                        font-family:KaiTi;
-                        font-weight:700;
+                    #btn_Add {
+                        margin-left: 600px;
+                        height: 40px;
+                        width: 90px;
+                        font-size: 19px;
+                        font-family: KaiTi;
+                        font-weight: 700;
                     }
-                    #btn_Add:hover{
-                        opacity:0.4;
-                    }
+
+                        #btn_Add:hover {
+                            opacity: 0.4;
+                        }
                 </style>
                 <!--点击增加输出到这里-->
                 <asp:Literal ID="ltMsg" runat="server"></asp:Literal>
@@ -149,6 +152,7 @@
                                 'link', 'unlink', '|',
                                 'simpleupload', 'insertimage', '|',
                                 'wordimage', '|',
+                                'insertvideo', '|',
                                 'inserttable', 'insertrow', 'deleterow', 'insertcol', 'deletecol', 'mergecells', 'splittocells']
                         ],
                         allowDivTransToP: false,     //阻止复制的div标签自动转换为p标签
@@ -186,6 +190,14 @@
             <style type="text/css">
                 #editor {
                     margin-top: 1px;
+                }
+                .auto-style1 {
+                    width: 70%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 1px;
+                    margin-bottom: 0;
+                    background: #fff;
                 }
             </style>
         </div>

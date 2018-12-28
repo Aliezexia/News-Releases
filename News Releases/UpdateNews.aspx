@@ -15,24 +15,24 @@
             <div id="top">
                 <div class="nav fl">
                     <a href="Message.aspx" class="current">首&nbsp;&nbsp;页</a>
-                    <a href="/news/jianadacubao.html">国际</a>
-                    <a href="/news/renmingribao.html">财经</a>
-                    <a href="/news/munv.html">热点</a>
+                    <a href="/newsDetail.aspx?categories='国际新闻'">国际</a>
+                    <a href="/newsDetail.aspx?categories='经济新闻'">财经</a>
+                    <a href="/newsDetail.aspx?categories='热点新闻'">热点</a>
+                    <a href="/newsDetail.aspx?categories='娱乐新闻'">娱乐</a>
+                    <a href="/newsDetail.aspx?categories='社会新闻'">社会</a>
+                    <a href="/newsDetail.aspx?categories='时政新闻'">时政</a>
                     <a href="/news/new_f5.jpg.html">风景</a>
-                    <a href="/news/mengqu.html">娱乐</a>
-                    <a href="/news/xijinpingshouguan.html">中国</a>
-                    <a href="/news/hunanyiyang.html">社会</a>
+                    <a href="/news/G20.html">中国</a>
                     <a href="/news/hanchaolanse.html">天气</a>
                     <a href="/news/jingjiguancha.html">直播</a>
-                    <a href="/news/G20.html">时政</a>
                     <a href="/news/dashi.html">文化</a>
                     <a href="/news/taimei.html">台湾</a>
-                    <a href="NewsManage.aspx">管理新闻</a>
+                    <a href="addNews.aspx">发布新闻</a>
                 </div>
                 <style type="text/css">
                     body {
                         background: url(/images/2.jpg);
-                        background-size:100%;
+                        background-size: 100%;
                     }
 
                     #top,
@@ -89,7 +89,7 @@
                         <td style="width: 120px; height: 30px; text-align: right;">填写标题：
                         </td>
                         <td>
-                            <asp:TextBox ID="text" runat="server"  Wrap="False"></asp:TextBox>
+                            <asp:TextBox ID="text" runat="server" Wrap="False"></asp:TextBox>
                         </td>
                     </tr>
 
@@ -125,17 +125,18 @@
                 <input type="hidden" id="getsession" value="<%= Session["ID"] %>" />
                 <button id="btn_Add">提交</button>
                 <style>
-                    #btn_Add{
-                        margin-left:450px;
-                        height:40px;
-                        width:90px;
-                        font-size:19px;
-                        font-family:KaiTi;
-                        font-weight:700;
+                    #btn_Add {
+                        margin-left: 450px;
+                        height: 40px;
+                        width: 90px;
+                        font-size: 19px;
+                        font-family: KaiTi;
+                        font-weight: 700;
                     }
-                    #btn_Add:hover{
-                        opacity:0.4;
-                    }
+
+                        #btn_Add:hover {
+                            opacity: 0.4;
+                        }
                 </style>
                 <!--点击增加输出到这里-->
                 <asp:Literal ID="ltMsg" runat="server"></asp:Literal>
@@ -171,7 +172,7 @@
                             url: 'UpdateNews.aspx/RequestMethod',
                             async: true,
                             contentType: "application/json;charset=utf-8",
-                            data: "{'msg':'" + msg + "','categories':'" + categories + "','title':'" + title + "','id':'" + id +"'}",
+                            data: "{'msg':'" + msg + "','categories':'" + categories + "','title':'" + title + "','id':'" + id + "'}",
                             //data: "{'msg':'"+msg+"'}",
                             dataType: "json",
                             success: function (result) {

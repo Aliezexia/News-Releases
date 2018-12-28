@@ -116,15 +116,10 @@
     <Content Include="news\dashi.html" />
     <Content Include="news\G20.html" />
     <Content Include="news\hanchaolanse.html" />
-    <Content Include="news\hunanyiyang.html" />
-    <Content Include="news\jianadacubao.html" />
     <Content Include="news\jingjiguancha.html" />
-    <Content Include="news\mengqu.html" />
     <Content Include="news\munv.html" />
     <Content Include="news\new_f5.jpg.html" />
-    <Content Include="news\renmingribao.html" />
     <Content Include="news\taimei.html" />
-    <Content Include="news\xijinpingshouguan.html" />
     <Content Include="Message.aspx" />
     <Content Include="addNews.aspx" />
     <Content Include="ueditor\demo.html" />

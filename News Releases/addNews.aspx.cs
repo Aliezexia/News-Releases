@@ -14,10 +14,10 @@ namespace News_Releases
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (Session["UserName"] == null)
-            //{
-            //    Response.Write("<script language='javascript'>alert('您还没有登陆!');this.location.href='Login.aspx';</SCRIPT>");
-            //}
+            if (Session["UserName"] == null)
+            {
+                Response.Write("<script language='javascript'>alert('您还没有登录!');this.location.href='Login.aspx';</SCRIPT>");
+            }
             text.Text = "";
         }
         
@@ -28,7 +28,7 @@ namespace News_Releases
             string html = msg;
             string Categories = categories;
             string Title = title;
-            MySqlConnection conn = new MySqlConnection("server=47.106.146.81;user id=root;password=;database=NEWS;charset=utf8");
+            MySqlConnection conn = new MySqlConnection("server=47.106.146.81;user id=root;password=030055lkz;database=NEWS;charset=utf8");
             if(html != "" && Categories != "" && Title != "")
             {
                 try

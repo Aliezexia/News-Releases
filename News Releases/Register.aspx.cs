@@ -18,7 +18,7 @@ namespace News_Releases
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            MySqlConnection conn = new MySqlConnection("server=47.106.146.81;user id=root;password=;database=NEWS;charset=utf8");
+            MySqlConnection conn = new MySqlConnection("server=47.106.146.81;user id=root;password=030055lkz;database=NEWS;charset=utf8");
             //从TextBox中获取用户输入信息
             string userName = TextBox1.Text.Trim();
             string userPassword = TextBox2.Text.Trim();

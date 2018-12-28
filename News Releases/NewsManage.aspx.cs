@@ -12,17 +12,30 @@ namespace News_Releases
 {
     public partial class NewsManage : System.Web.UI.Page
     {
-        MySqlConnection conn = new MySqlConnection("server=47.106.146.81;user id=root;password=;database=NEWS;charset=utf8");
+        MySqlConnection conn = new MySqlConnection("server=47.106.146.81;user id=root;password=030055lkz;database=NEWS;charset=utf8");
         public static int number;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if (Session["UserName"].ToString() == "admin")
             {
-                number = 0;
-                int n = Convert.ToInt32(Request.QueryString["id"]);
-                this.ddlNewsCategories.SelectedIndex = (n - 1);
-                this.bind();
+                if (!IsPostBack)
+                {
+                    number = 0;
+                    int n = Convert.ToInt32(Request.QueryString["id"]);
+                    this.ddlNewsCategories.SelectedIndex = (n - 1);
+                    this.bind();
+                }
+                
             }
+            else if(Session["UserName"] != null)
+            {
+                Response.Write("<script language='javascript'>alert('您不是管理员!');this.location.href='Message.aspx';</SCRIPT>");
+            }
+            else
+            {
+                Response.Write("<script language='javascript'>alert('您还没有登陆!');this.location.href='Login.aspx';</SCRIPT>");
+            }
+            
         }
         public void bind()
         {
@@ -53,8 +66,9 @@ namespace News_Releases
         protected void gvdNews_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             conn.Open();
-            string sql = "delete  from News where ID='" + this.gridNews.DataKeys[e.RowIndex].Value.ToString() + "'";
-            MySqlDataAdapter da = new MySqlDataAdapter(sql, conn);
+            string sql = "delete from News where ID='" + this.gridNews.DataKeys[e.RowIndex].Value.ToString() + "'";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            cmd.ExecuteScalar();
             conn.Close();
             if (number == 1)
             {
