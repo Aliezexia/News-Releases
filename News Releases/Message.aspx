@@ -4,11 +4,11 @@
     <div class="auto-style3">
         <div class="con-left">
             <a href="/news/new_3.jpg.html">
-                <img src="/images/3.jpg" id="1" class="auto-style5"></a>
+                <img src="/images/3.jpg" class="auto-style5"></a>
             <a href="/news/new_4.jpg.html">
-                <img src="/images/4.jpg" id="1" class="auto-style6"></a>
+                <img src="/images/4.jpg" class="auto-style6"></a>
             <a href="/news/new_f5.jpg.html">
-                <img src="/images/5.jpg" id="1" /></a>
+                <img src="/images/5.jpg" /></a>
         </div>
         <div class="auto-style2">
             <div class="a">

@@ -16,22 +16,24 @@ namespace News_Releases
         public static int number;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["UserName"].ToString() == "admin")
+            if (Session["UserName"] != null)
             {
-                if (!IsPostBack)
+                if(Session["UserName"].ToString() == "admin")
                 {
-                    number = 0;
-                    int n = Convert.ToInt32(Request.QueryString["id"]);
-                    this.ddlNewsCategories.SelectedIndex = (n - 1);
-                    this.bind();
+                    if (!IsPostBack)
+                    {
+                        number = 0;
+                        int n = Convert.ToInt32(Request.QueryString["id"]);
+                        this.ddlNewsCategories.SelectedIndex = (n - 1);
+                        this.bind();
+                    }
                 }
-                
+                else
+                {
+                    Response.Write("<script language='javascript'>alert('您不是管理员!');this.location.href='Message.aspx';</SCRIPT>");
+                }
             }
-            else if(Session["UserName"] != null)
-            {
-                Response.Write("<script language='javascript'>alert('您不是管理员!');this.location.href='Message.aspx';</SCRIPT>");
-            }
-            else
+            else if(Session["UserName"] == null)
             {
                 Response.Write("<script language='javascript'>alert('您还没有登陆!');this.location.href='Login.aspx';</SCRIPT>");
             }
@@ -103,6 +105,12 @@ namespace News_Releases
             {
                 e.Row.Cells[3].Text = Convert.ToDateTime(e.Row.Cells[3].Text).ToShortDateString();
             }
+        }
+
+        protected void btn_clear(object sender, EventArgs e)
+        {
+            Session["UserName"] = null;
+            Response.Redirect("Message.aspx");
         }
     }
 }

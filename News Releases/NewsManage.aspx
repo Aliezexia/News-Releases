@@ -26,51 +26,54 @@
                     <a href="/news/dashi.html">文化</a>
                     <a href="/news/taimei.html">台湾</a>
                     <a href="addNews.aspx">发布新闻</a>
+
                 </div>
                 <style type="text/css">
                     body {
-					background: url(/images/2.jpg);
-                    background-size:100%;
-				}
+                        background: url(/images/2.jpg);
+                        background-size: 100%;
+                    }
 
-				#top,
-				.banner,
-				.content {
-					width: 70%;
-					margin: 0 auto;
-					background: #fff;
-				}
+                    #top,
+                    .banner,
+                    .content {
+                        width: 70%;
+                        margin: 0 auto;
+                        background: #fff;
+                    }
 
-				#top {
-					height: 45px;
-				}
-				
+                    #top {
+                        height: 45px;
+                    }
 
-				.nav {
-					width: 100%;
-					height: 35px;
-					border-top: solid 10px #000;
-					margin-top: 9px;
-				}
 
-				.nav a {
-					font-size: 16px;
-					line-height: 35px;
-					padding: 0 8px;
-					color: #000;
-					height: 35px;
-					display: inline-block;
+                    .nav {
+                        width: 100%;
+                        height: 35px;
+                        border-top: solid 10px #000;
+                        margin-top: 9px;
+                    }
 
-				}
+                        .nav a {
+                            font-size: 16px;
+                            line-height: 35px;
+                            padding: 0 8px;
+                            color: #000;
+                            height: 35px;
+                            display: inline-block;
+                        }
 
-				.nav a:hover,
-				.current {
-					color: #fff !important;
-					background: #900;
-				}
+                            .nav a:hover,
+                            .current {
+                                color: #fff !important;
+                                background: #900;
+                            }
 
                     .auto-style1 {
                         width: 100%;
+                    }
+                    .auto-style2 {
+                        margin-bottom: 0px;
                     }
                 </style>
             </div>
@@ -88,9 +91,10 @@
                         <asp:ListItem>社会新闻</asp:ListItem>
                     </asp:DropDownList>
                             &nbsp;&nbsp;
-                    <asp:Button ID="btnSearch" runat="server" Height="20px" OnClick="btnSearch_Click"
-                        Text="查询" /><span style="float: right;"> &nbsp;<asp:HyperLink ID="HyperLink1" runat="server"
-                            NavigateUrl="~/Message.aspx">返回首页</asp:HyperLink></span>
+                    <asp:Button ID="btnSearch" runat="server" Height="20px" OnClick="btnSearch_Click" Text="查询" />
+                            
+                            <asp:Button ID="btnclear" runat="server" CssClass="auto-style2" OnClick="btn_clear" Text="退出登录" />
+                            
                         </td>
                     </tr>
                     <tr>
