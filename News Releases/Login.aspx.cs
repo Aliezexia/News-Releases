@@ -6,6 +6,7 @@ using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using MySql.Data.MySqlClient;
+using News_Releases.App_Code;
 
 namespace News_Releases
 {
@@ -18,7 +19,8 @@ namespace News_Releases
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            MySqlConnection con = new MySqlConnection("server=47.106.146.81;user id=root;password=030055lkz;database=NEWS;charset=utf8");
+
+            //MySqlConnection con = new MySqlConnection("server=47.106.146.81;user id=root;password=;database=NEWS;charset=utf8");
             //从TextBox中获取用户输入信息
             string LoginName = TextBox1.Text.Trim();
             string LoginPassword = TextBox2.Text.Trim();
@@ -30,11 +32,14 @@ namespace News_Releases
             }
             else
             {
+                DB_Singleton dB_Singleton = DB_Singleton.getInstance();
                 try
                 {
-                    con.Open();
+                    //con.Open();
                     string command = "select count(*) from userinfo where name = '" + LoginName + "' and pw = '" + LoginPassword + "'";
-                    MySqlCommand cmd = new MySqlCommand(command, con);
+                    dB_Singleton.setSql(command);
+                    MySqlCommand cmd = dB_Singleton.getCommand();
+                    //MySqlCommand cmd = new MySqlCommand(command, con);
                     if (Convert.ToInt32(cmd.ExecuteScalar()) > 0)
                     {
                         Session["UserName"] = TextBox1.Text;
@@ -56,7 +61,7 @@ namespace News_Releases
 
                 finally
                 {
-                    con.Close();
+                    dB_Singleton.close();
                 }
             }
         }

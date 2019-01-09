@@ -398,6 +398,16 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\AccessLogin.cs" />
+    <Compile Include="App_Code\Adapter.cs" />
+    <Compile Include="App_Code\DB_Singleton.cs" />
+    <Compile Include="App_Code\GetHtml.cs" />
+    <Compile Include="App_Code\IFactory.cs" />
+    <Compile Include="App_Code\GetTitle.cs" />
+    <Compile Include="App_Code\GetTime.cs" />
+    <Compile Include="App_Code\InsFactory.cs" />
+    <Compile Include="App_Code\AccessRegister.cs" />
+    <Compile Include="App_Code\Login.cs" />
     <Compile Include="UpdateNews.aspx.cs">
       <DependentUpon>UpdateNews.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

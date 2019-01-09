@@ -126,9 +126,9 @@
     <div class="container">
         <div class="nav">
             <ul>
-                <li><a href="">新浪</a></li>
-                <li><a href="">微信</a></li>
-                <li><a href="">关于我们</a></li>
+                <li><a href="https://www.sina.com.cn/.">新浪</a></li>
+                <li><a href="https://www.baidu.com/">百度</a></li>
+                <li><a href="About.aspx">关于我们</a></li>
                 <li><a href="Message.aspx">首页</a></li>
             </ul>
         </div>

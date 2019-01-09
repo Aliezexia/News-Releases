@@ -28,7 +28,7 @@ namespace News_Releases
             string html = msg;
             string Categories = categories;
             string Title = title;
-            MySqlConnection conn = new MySqlConnection("server=47.106.146.81;user id=root;password=030055lkz;database=NEWS;charset=utf8");
+            MySqlConnection conn = new MySqlConnection("server=47.106.146.81;user id=root;password=;database=NEWS;charset=utf8");
             if(html != "" && Categories != "" && Title != "")
             {
                 try
